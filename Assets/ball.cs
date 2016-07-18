@@ -28,13 +28,13 @@ public class ball : MonoBehaviour {
 	}
 
     // Collision detector
-    void OnCollisionEnter(Collision objeto)
+    void OnTriggerEnter(Collider objeto)
     {
-        if(objeto.collider.tag == "redgoal")
+        if(objeto.tag == "redgoal")
         {
             scoreb++;
         }
-        if(objeto.collider.tag == "bluegoal")
+        if(objeto.tag == "bluegoal")
         {
             scorer++;
         }
