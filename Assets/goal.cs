@@ -14,9 +14,5 @@ public class goal : MonoBehaviour {
     void Update() {
 
     }
-
-    void OnTriggerEnter(Collider col)
-    {
-        goals++;
-    }
+    
 }

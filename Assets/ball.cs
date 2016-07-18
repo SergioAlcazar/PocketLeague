@@ -33,11 +33,24 @@ public class ball : MonoBehaviour {
         if(objeto.tag == "redgoal")
         {
             scoreb++;
+
+            Invoke("ResetPositions", 2);
         }
         if(objeto.tag == "bluegoal")
         {
             scorer++;
+
+            Invoke("ResetPositions", 3);
         }
 
+    }
+
+    void ResetPositions()
+    {
+        GetComponent<TrailRenderer>().enabled = false;
+
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        transform.localPosition = new Vector3(0, 0.65f, 0);
+        GetComponent<TrailRenderer>().enabled = true;
     }
 }
